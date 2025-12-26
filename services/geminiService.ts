@@ -2,7 +2,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { FileData, SearchResult, CaseData, SourceData, DossierItem, PersonEntity } from '../types';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
 
 const ANALYSIS_SYSTEM_PROMPT = `Actúa como un/a supervisor/a clínico/a experto/a en infancia vulnerada y auditoría forense de expedientes del Poder Judicial Chileno (Tribunales de Familia).
 
